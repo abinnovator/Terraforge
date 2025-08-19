@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "terraforged:block/dense_mud_block"
+    }
+  }
+}
