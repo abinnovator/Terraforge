@@ -1,3 +1,6 @@
 {
-  "parent": "terraforged:block/dense_mud_block"
+  "model": {
+    "type": "minecraft:model",
+    "model": "block.terraforged.dense_mud_block"
+  }
 }
