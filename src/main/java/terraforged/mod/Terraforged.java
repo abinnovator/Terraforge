@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terraforged.mod.block.ModBlocks;
+import terraforged.mod.entity.ModEntities;
 import terraforged.mod.item.ModItems;
 
 public class Terraforged implements ModInitializer {
@@ -26,6 +27,7 @@ public class Terraforged implements ModInitializer {
         // 1. Loads the ModBlocks class, registering the blocks via the static fields.
         ModBlocks.initialize();
         ModItems.initialize();
+        ModEntities.registerModeEntities();
 
 	}
 }

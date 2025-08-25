@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "item.terraforged.spear"
+    "layer0": "terraforged:item/spear"
   }
 }

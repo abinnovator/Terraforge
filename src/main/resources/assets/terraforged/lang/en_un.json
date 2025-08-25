@@ -1,4 +1,4 @@
 {
-  "terraforged:dense_mud_block": "Dense Mud",
-  "terraforged:spear:": "Spear"
+  "block.terraforged.dense_mud_block": "Dense Mud",
+  "item.terraforged.spear": "Spear"
 }

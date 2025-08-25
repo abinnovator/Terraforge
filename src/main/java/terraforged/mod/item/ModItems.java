@@ -26,6 +26,7 @@ public class ModItems {
         return item;
     }
     public static final Item SPEAR = register("spear", Item::new, new Item.Settings());
+
     // Get the event for modifying entries in the ingredients group.
 // And register an event handler that adds our suspicious item to the ingredients group.
     public static void initialize() {

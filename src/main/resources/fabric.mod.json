@@ -3,9 +3,9 @@
 	"id": "terraforged",
 	"version": "${version}",
 	"name": "Terraforged",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod improves the current biomes to feel fresh and new but not going to far away from vanilla minecraft.",
 	"authors": [
-		"Me!"
+		"Abinnovator"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
