@@ -27,7 +27,8 @@ public class Terraforged implements ModInitializer {
         // 1. Loads the ModBlocks class, registering the blocks via the static fields.
         ModBlocks.initialize();
         ModItems.initialize();
-        ModEntities.registerModeEntities();
+        ModEntities.registerModEntities();
+
 
 	}
 }
