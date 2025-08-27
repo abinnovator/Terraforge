@@ -4,13 +4,14 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.client.render.entity.state.LivingEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Identifier;
 import terraforged.mod.Terraforged;
 import terraforged.mod.entity.custom.GlareEntity;
 
-public class GlareModel<T extends GlareEntity> extends EntityModel<T> {
+public class GlareModel extends EntityModel<LivingEntityRenderState> {
     public static final EntityModelLayer Glare = new EntityModelLayer(Identifier.of(Terraforged.MOD_ID, "glare"), "main");
     private final ModelPart bone;
     private final ModelPart bone2;
@@ -58,17 +59,17 @@ public class GlareModel<T extends GlareEntity> extends EntityModel<T> {
         ModelPartData cube_r4 = bone5.addChild("cube_r4", ModelPartBuilder.create().uv(28, 28).cuboid(-10.0F, -3.0F, -1.0F, 11.0F, 3.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -3.1416F));
         return TexturedModelData.of(modelData, 64, 64);
     }
-    @Override
-    public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.animateMovement(GlareAnimations.HOVERING, limbSwing, limbSwingAmount, 2f, 2.5f);
-        this.updateAnimation(entity.idleAnimationState, GlareAnimations.HOVERING, ageInTicks, 1f);
-
-    }
+//    TODO: Implement animations
+//    @Override
+//    public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+//        this.animateMovement(GlareAnimations.HOVERING, limbSwing, limbSwingAmount, 2f, 2.5f);
+//        this.updateAnimation(entity.idleAnimationState, GlareAnimations.HOVERING, ageInTicks, 1f);
+//
+//    }
 //    @Override
 //    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
 //        bone.render(matrices, vertexConsumer, light, overlay, color);
 //    }
-    @Override
     public ModelPart getPart() {
         return bone;
     }
