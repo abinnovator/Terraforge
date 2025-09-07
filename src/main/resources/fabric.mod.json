@@ -23,7 +23,10 @@
 		],
 		"fabric-datagen": [
 			"terraforged.mod.TerraforgedDataGenerator"
-		]
+		],
+      "terrabender": [
+        "terraforged.mod.world.ModTerrablenderAPI"
+      ]
 	},
 	"mixins": [
 		"terraforged.mixins.json",

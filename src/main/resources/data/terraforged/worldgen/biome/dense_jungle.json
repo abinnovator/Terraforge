@@ -1,0 +1,28 @@
+{
+  "temperature": 0.95,
+  "downfall": 0.9,
+  "has_precipitation": true,
+  "effects": {
+    "sky_color": 7842047,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 3571253,
+    "foliage_color": 3571253,
+    "music": [
+      {
+        "weight": 1,
+        "data": {
+          "sound": "minecraft:music.overworld.jungle",
+          "min_delay": 12000,
+          "max_delay": 24000,
+          "replace_current_music": false
+        }
+      }
+    ]
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": [],
+  "features": []
+}

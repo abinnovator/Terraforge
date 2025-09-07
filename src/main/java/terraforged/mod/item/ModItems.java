@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.item.equipment.EquipmentAssetKeys;
@@ -15,6 +16,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import terraforged.mod.Terraforged;
+import terraforged.mod.entity.ModEntities;
 
 import java.util.Map;
 import java.util.function.Function;
@@ -37,9 +39,8 @@ public class ModItems {
 
     //    Items
     public static final Item SPEAR = register("spear", Item::new, new Item.Settings());
-
-
-//    public static final RegistryKey<EquipmentAsset> SCUTE_ARMOR_MATERIAL_KEY = RegistryKey.of(
+    public static final Item GlareSpawnEgg= register("glare_spawn_egg", settings -> new SpawnEggItem(ModEntities.GLARE, settings), new Item.Settings());
+    //    public static final RegistryKey<EquipmentAsset> SCUTE_ARMOR_MATERIAL_KEY = RegistryKey.of(
 //            EquipmentAssetKeys.REGISTRY_KEY,
 //            Identifier.of(Terraforged.MOD_ID, "scute")
 //    );
@@ -84,11 +85,14 @@ public class ModItems {
 //            new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ScuteArmorMaterial.BASE_DURABILITY))
 //    );
 
+
     // Get the event for modifying entries in the ingredients group.
     // And register an event handler that adds our suspicious item to the ingredients group.
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
                 .register((itemGroup) -> itemGroup.add(ModItems.SPEAR));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS)
+                .register((itemGroup) -> itemGroup.add(ModItems.GlareSpawnEgg));
     }
 
 

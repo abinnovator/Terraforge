@@ -16,6 +16,8 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+    maven { url = 'https://maven.minecraftforge.net/' }
+
 }
 
 loom {
@@ -44,10 +46,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-//    minecraft "net.minecraft:minecraft:1.21.8"
-//    mappings "net.fabricmc:yarn:1.21.8+build.6:v2"
-//    modImplementation "net.fabricmc:fabric-loader:0.15.11"
-//    modImplementation "net.fabricmc.fabric-api:fabric-api:0.100.0+1.21.8"
+    modImplementation "com.github.glitchfiend:TerraBlender-fabric:${minecraft_version}-${terrablender_version}"
+
 	
 }
 
