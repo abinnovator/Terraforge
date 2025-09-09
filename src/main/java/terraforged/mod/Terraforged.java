@@ -3,6 +3,10 @@ package terraforged.mod;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.registry.BuiltinRegistries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terraforged.mod.block.ModBlocks;
@@ -34,6 +38,9 @@ public class Terraforged implements ModInitializer {
         FabricDefaultAttributeRegistry.register(ModEntities.GLARE, GlareEntity.createAttributes());
         // Inside your Terraforged.java onInitialize() method
         ModBiomes.registerBiomes();
+        RegistryBuilder builder = new RegistryBuilder();
+        builder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+
 
 
 	}
